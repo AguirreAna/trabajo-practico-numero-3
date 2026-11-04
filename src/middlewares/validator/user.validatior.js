@@ -1,6 +1,6 @@
 import { body, param } from "express-validator";
-import { UserModel } from "../models/user.model.js";
-import { applyValidations } from "./validator.js";
+import { UserModel } from "../../models/user.model.js";
+import { validationResult } from "./validatior.js";
 
 export const userIdValidation = [
   param("id")

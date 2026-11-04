@@ -12,7 +12,7 @@ import {
   categoryIdValidation,
   createCategoryValidation,
   updateCategoryValidation,
-} from "../middlewares/category.validations.js";
+} from "../middlewares/validator/category.validator.js";
 
 export const categoryRouter = Router();
 

@@ -2,7 +2,7 @@ import { body, param } from "express-validator";
 import { Types } from "mongoose";
 import { CategoryModel } from "../../models/category.model.js";
 import { EventModel } from "../../models/event.model.js";
-import { validationResult } from "./validatior.js";
+import { validateResult } from "./validator.js";
 
 const validateCategoriesExist = async (categories) => {
   if (!Array.isArray(categories) || categories.length === 0) {
@@ -31,7 +31,7 @@ export const eventIdValidation = [
   param("id")
     .isMongoId()
     .withMessage("El ID del evento no es un ObjectId válido"),
-  applyValidations,
+  validateResult,
 ];
 
 export const createEventValidation = [
@@ -131,7 +131,7 @@ export const createEventValidation = [
 
   body("categories").optional().custom(validateCategoriesExist),
 
-  applyValidations,
+  validateResult,
 ];
 
 export const updateEventValidation = [
@@ -245,5 +245,5 @@ export const updateEventValidation = [
 
   body("categories").optional().custom(validateCategoriesExist),
 
-  applyValidations,
+  validateResult,
 ];

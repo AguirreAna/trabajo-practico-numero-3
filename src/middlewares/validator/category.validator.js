@@ -1,12 +1,12 @@
 import { body, param } from "express-validator";
 import { CategoryModel } from "../../models/category.model.js";
-import { validationResult } from "./validatior.js";
+import { validateResult } from "./validator.js";
 
 export const categoryIdValidation = [
   param("id")
     .isMongoId()
     .withMessage("El ID de categoría no es un ObjectId válido"),
-  applyValidations,
+  validateResult,
 ];
 
 export const createCategoryValidation = [
@@ -29,8 +29,7 @@ export const createCategoryValidation = [
     .trim()
     .isLength({ max: 200 })
     .withMessage("La descripción no puede superar los 200 caracteres"),
-
-  applyValidations,
+  validateResult,
 ];
 
 export const updateCategoryValidation = [
@@ -62,5 +61,5 @@ export const updateCategoryValidation = [
     .isLength({ max: 200 })
     .withMessage("La descripción no puede superar los 200 caracteres"),
 
-  applyValidations,
+  validateResult,
 ];

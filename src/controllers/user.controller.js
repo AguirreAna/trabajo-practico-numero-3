@@ -1,5 +1,5 @@
 import { matchedData } from "express-validator";
-import { hashPassword } from "../helpers/bcrypt.helper.js";
+import { hashPassword } from "../helper/bcrypt.helper.js";
 import { EventModel } from "../models/event.model.js";
 import { UserModel } from "../models/user.model.js";
 

@@ -12,7 +12,7 @@ import {
   createEventValidation,
   eventIdValidation,
   updateEventValidation,
-} from "../middlewares/event.validations.js";
+} from "../middlewares/validator/event.validator.js";
 import { ownerOrAdminMiddleware } from "../middlewares/owner.middleware.js";
 
 export const eventRouter = Router();

@@ -1,4 +1,4 @@
-import { verifyToken } from "../helpers/jwt.helper.js";
+import { verifyToken } from "../helper/jwt.helper.js";
 import { UserModel } from "../models/user.model.js";
 
 export const authMiddleware = async (req, res, next) => {

@@ -1,23 +1,15 @@
 {
-  "name": "trabajo-practico-numero-3",
+  "name": "integrador de mongo",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
   "scripts": {
-    "dev": "node --watch app.js",
-    "start": "node app.js"
+    "dev": "node --watch app.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/AguirreAna/trabajo-practico-numero-3.git"
-  },
+  "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/AguirreAna/trabajo-practico-numero-3/issues"
-  },
-  "homepage": "https://github.com/AguirreAna/trabajo-practico-numero-3#readme",
-  "keywords": [],
+  "type": "module",
   "dependencies": {
     "bcrypt": "^6.0.0",
     "cookie-parser": "^1.4.7",

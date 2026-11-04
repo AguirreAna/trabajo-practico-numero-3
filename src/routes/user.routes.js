@@ -10,7 +10,7 @@ import { authMiddleware } from "../middlewares/auth.middleware.js";
 import {
   updateUserValidation,
   userIdValidation,
-} from "../middlewares/user.validations.js";
+} from "../middlewares/validator/user.validator.js";
 
 export const userRouter = Router();
 

@@ -1,12 +1,12 @@
 import { body, param } from "express-validator";
 import { UserModel } from "../../models/user.model.js";
-import { validationResult } from "./validatior.js";
+import { validateResult } from "./validator.js";
 
 export const userIdValidation = [
   param("id")
     .isMongoId()
     .withMessage("El ID de usuario no es un ObjectId válido"),
-  applyValidations,
+  validateResult,
 ];
 
 export const updateUserValidation = [
@@ -101,5 +101,5 @@ export const updateUserValidation = [
     .matches(/^\d{8,15}$/)
     .withMessage("El teléfono debe contener solo números (entre 8 y 15 dígitos)"),
 
-  applyValidations,
+  validateResult,
 ];

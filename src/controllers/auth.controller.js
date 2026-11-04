@@ -1,6 +1,6 @@
 import { matchedData } from "express-validator";
-import { comparePassword, hashPassword } from "../helpers/bcrypt.helper.js";
-import { generateToken } from "../helpers/jwt.helper.js";
+import { comparePassword, hashPassword } from "../helper/bcrypt.helper.js";
+import { generateToken } from "../helper/jwt.helper.js";
 import { UserModel } from "../models/user.model.js";
 
 export const register = async (req, res) => {
